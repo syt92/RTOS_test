@@ -216,6 +216,7 @@ int main(void)
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
     portDISABLE_INTERRUPTS();
     printf("hello\r\n");
+    printf("hello\r\n");
     vTaskStartScheduler();
     /* USER CODE BEGIN 3 */
   }

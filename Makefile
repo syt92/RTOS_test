@@ -77,6 +77,11 @@ Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c \
 Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c \
 Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c  
 
+C_SOURCES += FreeRTOS/src/list.c
+C_SOURCES += FreeRTOS/src/port.c
+C_SOURCES += FreeRTOS/src/tasks.c
+C_SOURCES += FreeRTOS/src/timers.c
+C_SOURCES += FreeRTOS/src/queue.c
 # ASM sources
 ASM_SOURCES =  \
 startup_stm32f407xx.s
@@ -140,7 +145,8 @@ C_INCLUDES =  \
 -IMiddlewares/ST/STM32_USB_Host_Library/Core/Inc \
 -IMiddlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
--IDrivers/CMSIS/Include 
+-IDrivers/CMSIS/Include \
+-IFreeRTOS/include
 
 
 # compile gcc flags
